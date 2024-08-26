@@ -1135,7 +1135,7 @@ function drawHealth(x, y, instance, ratio, alpha) {
     if (instance.drawsHealth) {
         let health = instance.render.health.get(),
             shield = instance.render.shield.get();
-        if (health < 0.99 || shield < 0.99 && global.GUIStatus.renderhealth) {
+        if (health < 0.98 || shield < 0.98 && global.GUIStatus.renderhealth) {
             let col = settings.graphical.coloredHealthbars ? gameDraw.mixColors(gameDraw.modifyColor(instance.color), color.guiwhite, 0.5) : color.lgreen;
             let yy = y + realSize + 15 * ratio;
             let barWidth = 3 * ratio;
@@ -1211,7 +1211,7 @@ function drawEntityIcon(model, x, y, len, height, lineWidthMult, angle, alpha, c
 
     // Upgrade key
     if (upgradeKey) {
-        drawText("[" + upgradeKey + "]", x + len - 4, y + height - 6, height / 8 - 5, color.guiwhite, "right");
+        drawText("[" + upgradeKey + "]", x + len - 4, y + height - 6, height / 8 - 5, color.guiwhite, "left");
     }
     ctx.strokeStyle = color.dgrey;
     ctx.lineWidth = 1.5 * lineWidthMult;
@@ -1626,7 +1626,7 @@ function drawUpgradeTree(spacing, alcoveSize) {
     let w = measureText(text, 18);
     ctx.globalAlpha = 1;
     ctx.lineWidth = 1;
-    ctx.fillStyle = color.dgrey;
+    ctx.fillStyle = color.white;
     ctx.strokeStyle = color.black;
     ctx.fillText(text, global.screenWidth / 2 - w / 2, innerHeight * 0.04);
     ctx.strokeText(text, global.screenWidth / 2 - w / 2, innerHeight * 0.04);
@@ -2341,7 +2341,7 @@ let getKills = () => {
     let finalKills = {
         " kills": [Math.round(global.finalKills[0].get()), 1],
         " assists": [Math.round(global.finalKills[1].get()), 0.5],
-        " visitors defeated": [Math.round(global.finalKills[2].get()), 3],
+        " bosses defeated": [Math.round(global.finalKills[2].get()), 3],
         " polygons destroyed": [Math.round(global.finalKills[3].get()), 0.05],
     }, killCountTexts = [];
     let destruction = 0;
