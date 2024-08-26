@@ -206,7 +206,7 @@ function getElements(kb, storeInDefault) {
     }
 }
 window.onload = async () => {
-    window.serverAdd = 'amorex-ser-d.glitch.me';
+    window.serverAdd = 'amorex-ser-ft-aqocnoajxo.glitch.me';
     if (Array.isArray(window.serverAdd)) {
         window.isMultiserver = true;
         const servers = window.serverAdd;
