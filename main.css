@@ -168,7 +168,7 @@ body.mobile #optMobile, body.mobile #optBorders {
     font-size: large;
 }
 #playerKeyInput {
-    padding: 4px;
+    padding: 2px;
     color: gray;}
 
 input:focus,
