@@ -269,7 +269,7 @@ window.onload = async () => {
             try {
                 const tr = document.createElement("tr");
                 const td = document.createElement("td");
-                td.textContent = `${location} > ${server.gameMode} | ${server.players} Players`;
+                td.textContent = `       ${location}  -  ${server.gameMode}  -  ${server.players} Playing`;
                 td.onclick = () => {
                     if (myServer.classList.contains("selected")) {
                         myServer.classList.remove("selected");
