@@ -195,9 +195,9 @@ div.optionsHeader {
     text-align: center;
 }
 .serverSelector {
-    height: 50px;
+    height: 80px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     line-height: 13px;
     padding-left: 10px;
@@ -214,7 +214,7 @@ div.optionsHeader {
 }
 
 .serverSelector tr.selected {
-    color: #1B3353;
+    color: #8442ff;
     /*color: #8ABC3F;*/
     cursor: default;
 }
