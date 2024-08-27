@@ -8,7 +8,44 @@ import { color } from "./lib/color.js";
 import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
-
+let ServerList = [
+    [
+        "amorex-ser-ft-aqocnoajxo.glitch.me",
+        "DEV",
+        true,
+        0
+    ],
+    [
+        "amorex-ser-ft-asia.glitch.me",
+        "ASIA",
+        true,
+        0
+    ],
+    [
+        "amorex-ser-ft-europe.glitch.me",
+        "EUROPE",
+        false,
+        0
+    ],
+    [
+        "amorex-ser-ft-oceania.glitch.me",
+        "",
+        true,
+        0
+    ],
+    [
+      "amorex.glitch.me",
+      "Main",
+      true,
+      0
+    ],
+    [
+      "industrious-stump-waltz.glitch.me",
+      "Test",
+      true,
+      0
+    ]
+]
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
 // .then((response) => response.text())
@@ -206,14 +243,15 @@ function getElements(kb, storeInDefault) {
     }
 }
 window.onload = async () => {
-    window.serverAdd = 'amorex-ser-ft-aqocnoajxo.glitch.me';
+    window.serverAdd = ServerList//(await (await fetch("https://amorex-ser-ft-aqocnoajxo.glitch.me/browserData.json")).json());
     if (Array.isArray(window.serverAdd)) {
         window.isMultiserver = true;
         const servers = window.serverAdd;
         let serverSelector = document.getElementById("serverSelector"),
             tbody = document.createElement("tbody");
         serverSelector.style.display = "block";
-        document.getElementById("startMenuSlidingContent").removeChild(document.getElementById("serverName"));
+        //document.getElementById("startMenuSlidingContent").removeChild(document.getElementById("serverName"));
+        document.getElementById("serverName").remove()
         serverSelector.classList.add("serverSelector");
         serverSelector.classList.add("shadowscroll");
         serverSelector.appendChild(tbody);
@@ -222,18 +260,23 @@ window.onload = async () => {
                 contains: () => false,
             },
         };
-        for (let server of servers) {
+        for (let serverArray of servers) {
+          let protocol = serverArray[2] ? "https:" : "http:",
+            location = serverArray[1],
+            ip = serverArray[0];
+          let server = await (await fetch(`${protocol}//${ip}/lib/json/gamemodeData.json`).catch(e => {Error(e); return {json: () => {return false}}})).json()
+            if(server !== false)
             try {
                 const tr = document.createElement("tr");
                 const td = document.createElement("td");
-                td.textContent = `${server.gameMode} | ${server.players} Players`;
+                td.textContent = `${location} > ${server.gameMode} | ${server.players} Players`;
                 td.onclick = () => {
                     if (myServer.classList.contains("selected")) {
                         myServer.classList.remove("selected");
                     }
                     tr.classList.add("selected");
                     myServer = tr;
-                    window.serverAdd = server.ip;
+                    window.serverAdd = ip;
                     getMockups();
                 };
                 tr.appendChild(td);
@@ -1135,7 +1178,7 @@ function drawHealth(x, y, instance, ratio, alpha) {
     if (instance.drawsHealth) {
         let health = instance.render.health.get(),
             shield = instance.render.shield.get();
-        if (health < 0.98 || shield < 0.98 && global.GUIStatus.renderhealth) {
+        if (health < 0.99 || shield < 0.99 && global.GUIStatus.renderhealth) {
             let col = settings.graphical.coloredHealthbars ? gameDraw.mixColors(gameDraw.modifyColor(instance.color), color.guiwhite, 0.5) : color.lgreen;
             let yy = y + realSize + 15 * ratio;
             let barWidth = 3 * ratio;
@@ -1530,7 +1573,7 @@ function drawEntities(px, py, ratio) {
                 msgLengthHalf = measureText(text, 15 * ratioForChat) / 2,
                 alpha = Math.max(!global.mobile ? 0 : 1, Math.min(1000, chat.expires - now) / 1000);
 
-            ctx.globalAlpha = 0.4 * alpha;
+            ctx.globalAlpha = 0.5 * alpha;
             drawBar(x - msgLengthHalf, x + msgLengthHalf, y, 30 * ratioForChat, gameDraw.modifyColor(instance.color));
             ctx.globalAlpha = alpha;
             settings.graphical.fontStrokeRatio *= 1.2;
@@ -1626,7 +1669,7 @@ function drawUpgradeTree(spacing, alcoveSize) {
     let w = measureText(text, 18);
     ctx.globalAlpha = 1;
     ctx.lineWidth = 1;
-    ctx.fillStyle = color.white;
+    ctx.fillStyle = color.dgrey;
     ctx.strokeStyle = color.black;
     ctx.fillText(text, global.screenWidth / 2 - w / 2, innerHeight * 0.04);
     ctx.strokeText(text, global.screenWidth / 2 - w / 2, innerHeight * 0.04);
@@ -2341,7 +2384,7 @@ let getKills = () => {
     let finalKills = {
         " kills": [Math.round(global.finalKills[0].get()), 1],
         " assists": [Math.round(global.finalKills[1].get()), 0.5],
-        " bosses defeated": [Math.round(global.finalKills[2].get()), 3],
+        " visitors defeated": [Math.round(global.finalKills[2].get()), 3],
         " polygons destroyed": [Math.round(global.finalKills[3].get()), 0.05],
     }, killCountTexts = [];
     let destruction = 0;
