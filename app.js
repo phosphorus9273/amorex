@@ -15,7 +15,7 @@ let ServerList = [
         true,
         0
     ],
-    [
+    /*[
         "amorex-ser-ft-asia.glitch.me",
         "ASIA",
         true,
@@ -44,7 +44,7 @@ let ServerList = [
       "          Testing Server",
       true,
       0
-    ]
+    ]*/ // We don't want these for now.
 ]
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
