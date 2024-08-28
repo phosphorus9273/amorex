@@ -11,7 +11,7 @@ import * as socketStuff from "./lib/socketInit.js";
 let ServerList = [
     [
         "amorex-ser-ft-aqocnoajxo.glitch.me",
-        "           4TDM Server",
+        "Main Server",
         true,
         0
     ],
