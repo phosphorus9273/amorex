@@ -164,7 +164,7 @@ body.mobile #optMobile, body.mobile #optBorders {
     display: inline-block;
 }
 #playerNameInput {
-    padding: 8px;
+    padding: 4px;
     font-size: medium;
 }
 #playerKeyInput {
