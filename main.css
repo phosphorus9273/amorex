@@ -164,8 +164,8 @@ body.mobile #optMobile, body.mobile #optBorders {
     display: inline-block;
 }
 #playerNameInput {
-    padding: 8px;
-    font-size: medium;
+    padding: 10px;
+    font-size: large;
 }
 #playerKeyInput {
     padding: 2px;
@@ -195,12 +195,12 @@ div.optionsHeader {
     text-align: center;
 }
 .serverSelector {
-    height: 26px;
+    height: 25px;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     line-height: 12px;
-    padding-left: 40px;
+    padding-left: 10px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -214,7 +214,7 @@ div.optionsHeader {
 }
 
 .serverSelector tr.selected {
-    color: #8442ff;
+    color: #8547ff;
     /*color: #8ABC3F;*/
     cursor: default;
 }
@@ -275,7 +275,7 @@ table {
     transition: top 500ms, opacity 500ms;
 }
 .slided .slider {
-    top: -300px;
+    top: -305px;
 }
 #startMenuSlidingContent {
     height: 305px;
@@ -756,6 +756,39 @@ td b {
     cursor: pointer;
     text-align: right;
     vertical-align: bottom;
+}
+
+td.editing b {
+    background: #fff;
+    color: #333;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 1px 4px;
+    margin: -2px -7px -2px -3px;
+    text-align: center;
+    cursor: text;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+td.editing span {
+    visibility: hidden;
+}
+td b {
+    display: inline-block;
+    width: 12px;
+    height: 17px;
+    cursor: pointer;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.tdLeft {
+    width: 25%;
+}
+.tdCenter {
+    width: 350px;
 }
 
 *:focus {
