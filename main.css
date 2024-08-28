@@ -862,7 +862,7 @@ i.flag::before {
     display: inline-block;
     width: 9px;
     height: 7px;
-    background-color: #000000;
+    background-color: #000001;
     margin: 0 0 5px 3px;
     transition: margin-bottom 500ms;
 }
