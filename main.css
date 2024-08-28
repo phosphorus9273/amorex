@@ -275,7 +275,7 @@ table {
     transition: top 500ms, opacity 500ms;
 }
 .slided .slider {
-    top: -3900px;
+    top: -365px;
 }
 #startMenuSlidingContent {
     height: 305px;
