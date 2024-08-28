@@ -275,10 +275,10 @@ table {
     transition: top 500ms, opacity 500ms;
 }
 .slided .slider {
-    top: -290px;
+    top: -285px;
 }
 #startMenuSlidingContent {
-    height: 290px;
+    height: 285px;
 }
 body.mobile .desktopControlTab {
     display: none;
