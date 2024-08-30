@@ -16,7 +16,7 @@ let ServerList = [
         0
     ],
     [
-        "abalone-wheat-butter.glitch.me",
+        "gravel-zealous-polyester.glitch.me",
         "Testings Server",
         true,
         0
