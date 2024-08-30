@@ -304,6 +304,7 @@ window.onload = async () => {
     util.retrieveFromLocalStorage("optLowResolution");
     util.retrieveFromLocalStorage("coloredHealthbars");
     util.retrieveFromLocalStorage("centerTank");
+    util.retrieveFromLocalStorage("disableFlashes");
     util.retrieveFromLocalStorage("optColors");
     util.retrieveFromLocalStorage("optCustom");
     util.retrieveFromLocalStorage("optNoPointy");
@@ -638,6 +639,7 @@ function startGame() {
     util.submitToLocalStorage("optFancy");
     util.submitToLocalStorage("optLowResolution");
     util.submitToLocalStorage("centerTank");
+    util.submitToLocalStorage("disableFlashes");
     util.submitToLocalStorage("optBorders");
     util.submitToLocalStorage("optNoPointy");
     util.submitToLocalStorage("autoLevelUp");
