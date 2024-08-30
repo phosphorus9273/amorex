@@ -15,12 +15,12 @@ let ServerList = [
         true,
         0
     ],
-    /*[
-        "amorex-ser-ft-asia.glitch.me",
-        "ASIA",
+    [
+        "abalone-wheat-butter.glitch.me",
+        "Testing Server",
         true,
         0
-    ],
+    ],/*
     [
         "amorex-ser-ft-europe.glitch.me",
         "EUROPE",
