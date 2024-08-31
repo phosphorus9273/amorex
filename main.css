@@ -63,6 +63,7 @@ canvas {
     padding: 0;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-bottom: 0px;
     text-align: center;
     font-size: medium;
     font-weight: bold;
@@ -195,13 +196,13 @@ div.optionsHeader {
     text-align: center;
 }
 .serverSelector {
-    height: 25px;
+    height: 60px;
     text-align: center;
-    font-size: 11px;
+    font-size: 14px;
     color: #919191;
     font-weight: bold;
-    line-height: 12px;
-    padding-left: 90px;
+    line-height: 10px;
+    padding-left: 0px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -246,7 +247,7 @@ body.mobile #startMenu {
 .startMenuHolder {
     width: 350px;
     height: 380px;
-    padding: 10px;
+    padding: 5px;
     overflow: hidden;
     display: inline-block;
     vertical-align: text-top;
@@ -355,7 +356,7 @@ update {
     overflow: hidden auto;
     scrollbar-width: thin;
     scrollbar-color: oklch(0% 0 0 / 30%) oklch(0% 0 0 / 15%);
-    border: solid 4px #000000
+    /*border: solid 4px #000000*/
 }
 
 #patchNotes div {
@@ -363,6 +364,12 @@ update {
         margin: 0;
         font-size: 1.5em;
         font-weight: bold;
+    }
+  
+    > hr {
+      border: none;
+      height: 3px;
+      background-color: gray;
     }
 
     > date {
@@ -407,15 +414,13 @@ select:active {
 }
 .shadowScroll {
     overflow-y: scroll;
-    background:
-        /* Shadow covers */
+    /*background:
         linear-gradient(#dde6eb 30%, rgba(255, 255, 255, 0)),
         linear-gradient(rgba(255, 255, 255, 0), #dde6eb 70%) 0 100%,
-        /* Shadows */
         radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
-        radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+        radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;*/
     background-repeat: no-repeat;
-    background-color: #dde6eb;
+    /*background-color: #dde6eb*/
     background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
     background-attachment: local, local, scroll, scroll;
 }
