@@ -27,6 +27,12 @@ let servers = [
         true,
         0
     ],
+    [
+       "e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com",
+       "EU",
+        true,
+        0
+    ]
   ];
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
