@@ -8,44 +8,26 @@ import { color } from "./lib/color.js";
 import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
-let ServerList = [
+let servers = [
     [
-        "amorex-ser-ft-aqocnoajxo.glitch.me",
-        "Main Server",
+        "qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com",
+        "USA",
         true,
         0
     ],
     [
-        "gravel-zealous-polyester.glitch.me",
-        "Testing Server",
-        true,
-        0
-    ],/*
-    [
-        "amorex-ser-ft-europe.glitch.me",
-        "EUROPE",
-        false,
-        0
-    ],
-    [
-        "amorex-ser-ft-oceania.glitch.me",
-        "",
+        "dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com",
+        "ASIA",
         true,
         0
     ],
     [
-      "amorex.glitch.me",
-      "          4TDM",
-      true,
-      0
+        "nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com",
+        "EU",
+        true,
+        0
     ],
-    [
-      "industrious-stump-waltz.glitch.me",
-      "          Testing Server",
-      true,
-      0
-    ]*/ // We don't want these for now.
-]
+  ];
 let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } = socketStuff;
 // fetch("changelog.md", { cache: "no-cache" })
 // .then((response) => response.text())
@@ -243,7 +225,7 @@ function getElements(kb, storeInDefault) {
     }
 }
 window.onload = async () => {
-    window.serverAdd = ServerList//(await (await fetch("https://amorex-ser-ft-aqocnoajxo.glitch.me/browserData.json")).json());
+    window.serverAdd = servers//(await (await fetch("https://amorex-ser-ft-aqocnoajxo.glitch.me/browserData.json")).json());
     if (Array.isArray(window.serverAdd)) {
         window.isMultiserver = true;
         const servers = window.serverAdd;
@@ -260,31 +242,54 @@ window.onload = async () => {
                 contains: () => false,
             },
         };
-        for (let serverArray of servers) {
+      for (let serverArray of servers) {
           let protocol = serverArray[2] ? "https:" : "http:",
             location = serverArray[1],
             ip = serverArray[0];
-          let server = await (await fetch(`${protocol}//${ip}/lib/json/gamemodeData.json`).catch(e => {Error(e); return {json: () => {return false}}})).json()
-            if(server !== false)
-            try {
-                const tr = document.createElement("tr");
-                const td = document.createElement("td");
-                td.textContent = `       ${location}  -  ${server.gameMode}  -  ${server.players} Playing`;
-                td.onclick = () => {
-                    if (myServer.classList.contains("selected")) {
-                        myServer.classList.remove("selected");
-                    }
-                    tr.classList.add("selected");
-                    myServer = tr;
-                    window.serverAdd = ip;
-                    getMockups();
-                };
-                tr.appendChild(td);
-                tbody.appendChild(tr);
+try {
+    let server = await (await fetch(`${protocol}//${ip}/lib/json/gamemodeData.json`)
+        .catch(e => {
+            console.error(e);
+            return { json: () => false };
+        })).json();
+
+    if (server !== false) {
+        try {
+            const tr = document.createElement("tr");
+
+            const tdLocation = document.createElement("td");
+            const tdGameMode = document.createElement("td");
+            const tdPlayers = document.createElement("td");
+
+            tdLocation.textContent = location;
+            tdGameMode.textContent = server.gameMode;
+            tdPlayers.textContent = `${server.players}/20`;
+
+            tdGameMode.classList.add("tdCenter");
+
+            tr.appendChild(tdLocation);
+            tr.appendChild(tdGameMode);
+            tr.appendChild(tdPlayers);
+
+            tr.onclick = () => {
+                if (myServer.classList.contains("selected")) {
+                    myServer.classList.remove("selected");
+                }
+                tr.classList.add("selected");
                 myServer = tr;
-            } catch (e) {
-                console.log(e);
-            }
+                window.serverAdd = ip;
+                getMockups();
+            };
+            tbody.appendChild(tr);
+            myServer = tr;
+        } catch (e) {
+            console.error("Error processing server data:", e);
+        }
+    }
+} catch (e) {
+    console.error("Error fetching server data:", e);
+}
+
         }
         if (Array.from(myServer.children)[0].onclick) {
             Array.from(myServer.children)[0].onclick();
@@ -295,6 +300,7 @@ window.onload = async () => {
             document.getElementById("serverName").innerHTML = `<h4 class="nopadding">${json.gameMode} | ${json.players} Players</h4>`;
         });
     }
+
     // Save forms
     util.retrieveFromLocalStorage("playerNameInput");
     util.retrieveFromLocalStorage("playerKeyInput");
