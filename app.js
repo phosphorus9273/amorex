@@ -229,6 +229,7 @@ import * as socketStuff from "./lib/socketInit.js";
 				["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],
 				["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],
 				["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0]
+	    		        ["delicious-screeching-jumpsuit.glitch.me", "EU", true, 0] // temporary siege server.
 			];
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
