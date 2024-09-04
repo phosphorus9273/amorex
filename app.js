@@ -9,12 +9,12 @@ import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
   let ServerList = [
-    ["localhost:3000", "Localhost", false, 0],
-    ["absentpopcorn33amorexserver.onrender.com", "TestServer", true, 0],
+    ["localhost:3000", "Localhost", false, -1], // dont show
+    ["absentpopcorn33amorexserver.onrender.com", "TestServer", false, -1], // dont show
     ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "MainUSA", true, 0],
     ["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "MainASIA", true, 0],
     ["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "MainEU", true, 0]
-    ["delicious-screeching-jumpsuit.glitch.me", "SiegeEU", true, 0],
+    ["gajwfa0wfirsgeookwapfjapfgijsipo.onrender.com", "BossEU", true, 0], // siege server
   ];
   let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } =
     socketStuff;
@@ -224,13 +224,7 @@ import * as socketStuff from "./lib/socketInit.js";
     }
   }
   window.onload = async () => {
-    const servers = [
-				["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
-				["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],
-				["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],
-				["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0]
-	    		        ["delicious-screeching-jumpsuit.glitch.me", "EU", true, 0] // temporary siege server.
-			];
+   /* THIS IS WHAT DOES THE MULTISERVER, TAKEN FROM serverList */                                                                 const servers = [["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0],["delicious-screeching-jumpsuit.glitch.me", "EU", true, 0] /* tmprry s /i /e /g /e server*/];
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
       tbody = document.createElement("tbody");
