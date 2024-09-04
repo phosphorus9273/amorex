@@ -224,7 +224,7 @@ import * as socketStuff from "./lib/socketInit.js";
     }
   }
   window.onload = async () => {
-   /* THIS IS WHAT DOES THE MULTISERVER, TAKEN FROM serverList */                                                                 const servers = [["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0],["delicious-screeching-jumpsuit.glitch.me", "EU", true, 0] /* tmprry s /i /e /g /e server*/];
+   /* THIS IS WHAT DOES THE MULTISERVER, TAKEN FROM serverList */                                                                 const servers = [["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],["delicious-screeching-jumpsuit.glitch.me", "EU", true, 0] /* tmprry s /i /e /g /e server*/];
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
       tbody = document.createElement("tbody");
