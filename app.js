@@ -9,7 +9,7 @@ import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
   let ServerList = [
-    ["localhost:3000", "Localhost", false, -1], // dont show this server too, it's a localhost.
+    ["localhost:3000", "Localhost", false, -1], // dont show this server too, it's a localhost. (its literally a localhost :sob:)
     ["absentpopcorn33amorexserver.onrender.com", "TestServer", false, -1], // dont show this server, its a testing server which is unnaccesible. This might be added privately soon, what do you think?
     ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "MainUSA", true, 0],
     ["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "MainASIA", true, 0],
