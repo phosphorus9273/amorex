@@ -9,12 +9,11 @@ import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
   let ServerList = [
-    ["localhost:3000", "Localhost", false, -1], // dont show this server too, it's a localhost. (its literally a localhost :sob:).
-    ["absentpopcorn33amorexserver.onrender.com", "TestServer", false, -1], // dont show this server, its a testing server which is unnaccesible. This might be added privately soon, what do you think?
-    ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "MainUSA", true, 0], // USA MAIN SERVER
-    ["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "MainASIA", true, 0], // ASIA MAIN SERVER
-    ["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "MainEU", true, 0] // EU MAIN SERVER
-    ["gajwfa0wfirsgeookwapfjapfgijsipo.onrender.com", "BossEU", true, 0], // siege server-
+    ["localhost:3000", "Localhost", false, 0],
+    ["absentpopcorn33amorexserver.onrender.com", "TestServer", true, 0],
+    ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "MainUSA", true, 0],
+    ["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "MainASIA", true, 0],
+    ["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "MainEU", true, 0]
   ];
   let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } =
     socketStuff;
@@ -224,7 +223,12 @@ import * as socketStuff from "./lib/socketInit.js";
     }
   }
   window.onload = async () => {
-   /* THIS IS WHAT DOES THE MULTISERVER, TAKEN FROM serverList */                                                                 const servers = [["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],["delicious-screeching-jumpsuit.glitch.me", "EU", true, 0] /* tmprry s /i /e /g /e server*/];
+    const servers = [
+				["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
+				["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],
+				["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],
+				["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0]
+			];
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
       tbody = document.createElement("tbody");
