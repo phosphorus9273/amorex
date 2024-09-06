@@ -8,13 +8,6 @@ import { color } from "./lib/color.js";
 import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
-  let ServerList = [
-    ["localhost:3000", "Localhost", false, 0],
-    ["absentpopcorn33amorexserver.onrender.com", "TestServer", true, 0],
-    ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "MainUSA", true, 0],
-    ["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "MainASIA", true, 0],
-    ["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "MainEU", true, 0]
-  ];
   let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } =
     socketStuff;
   // fetch("changelog.md", { cache: "no-cache" })
@@ -226,8 +219,9 @@ import * as socketStuff from "./lib/socketInit.js";
     const servers = [
 				["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
 				["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],
+        ["bxd6lt9ta7qkw56xzgz5osqmtqch5mxb.onrender.com", "ASIA", true, 0],
 				["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],
-				["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0]
+				["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0],
 			];
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
