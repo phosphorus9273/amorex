@@ -2839,7 +2839,7 @@ import * as socketStuff from "./lib/socketInit.js";
       );
       drawText(
         global.metrics.latency + " ms | " + /*global.metrics.updatetime + "Hz"*/global.mspt +
-        " mspt",
+        " mspt", // mspt for hz
         x + len,
         y - 42,
         10,
