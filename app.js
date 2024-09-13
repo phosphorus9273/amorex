@@ -441,6 +441,7 @@ import * as socketStuff from "./lib/socketInit.js";
         document.getElementById("tabOptions"),
         document.getElementById("tabControls"),
         document.getElementById("tabAbout"),
+        document.getElementById("tabAccounts"),
       ];
     for (let g = 1; g < tabOptions.length; g++)
       tabOptions[g].style.display = "none";
