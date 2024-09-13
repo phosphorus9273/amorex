@@ -2838,8 +2838,8 @@ import * as socketStuff from "./lib/socketInit.js";
         "right"
       );
       drawText(
-        global.metrics.latency + " ms | " + /*global.metrics.updatetime + "Hz"*/global.mspt +
-        " mspt", // display mspt isntead of hz.
+        global.metrics.latency + " ms | " +*global.metrics.updatetime + "Hz"/*global.mspt +
+        " mspt"*/, 
         x + len,
         y - 42,
         10,
