@@ -217,6 +217,7 @@ import * as socketStuff from "./lib/socketInit.js";
   }
   window.onload = async () => {
     const servers = [
+        ["L1XH4M2iMZnm5VAnqeRA8R0vDbulqF5P.onrender,com", "USA", true, 0],
 				["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
 				["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],
         ["bxd6lt9ta7qkw56xzgz5osqmtqch5mxb.onrender.com", "ASIA", true, 0],
