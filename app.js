@@ -2838,8 +2838,7 @@ import * as socketStuff from "./lib/socketInit.js";
         "right"
       );
       drawText(
-        global.metrics.latency + " ms | " + global.metrics.updatetime + "Hz"/*global.mspt +
-        " mspt"*/, // hz instead of mspt
+        global.metrics.latency + " ms | " + global.metrics.updatetime + "Hz",
         x + len,
         y - 42,
         10,
@@ -2849,7 +2848,7 @@ import * as socketStuff from "./lib/socketInit.js";
     } else
       drawText("Amorex", x + len, y - 30 - 2 * 14 - 2, 15, "#8c40ff", "right");
     drawText(
-      global.metrics.latency + " ms : " + global.metrics.updatetime + "Hz",
+      global.metrics.latency + " ms | " + global.metrics.updatetime + "Hz",
       x + len,
       y - 42,
       10,
