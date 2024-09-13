@@ -40,14 +40,14 @@
 
                             <div id="serverName"><h4 class="nopadding">Connecting to server...</h4></div>
                             <table id="serverSelector" style="display:none;"></table>
-                            <input type="text" autofocus tabindex="1" spellcheck="false" placeholder="This is the adventure of (your name)" id="playerNameInput" maxlength="26" />
+                            <input type="text" autofocus tabindex="1" spellcheck="false" placeholder="This is the adventure of..." id="playerNameInput" maxlength="26" />
                             <input type="text" class="conceal" tabindex="3" placeholder="Redeem Code" id="playerKeyInput" maxlength="64" />
                         </div>
                         <div class="slider" id="startMenuSlidingTrigger">
                             <h3><span class="nopadding" id="viewOptionText">view options</span>&nbsp;&nbsp;<i class="arrow" id="optionArrow" style="transform:rotate(-45deg);-webkit-transform:rotate(-45deg)"></i></h3>
                         </div>
                         <div class="slider startMenuSlidingContent">
-                            <div class="horizontalSelector" id="optionMenuTabs"><span class="active">Appearance</span><span>Options</span><span class="desktopControlTab">Controls</span><span>Links</span></div>
+                            <div class="horizontalSelector" id="optionMenuTabs"><span class="active">Appearance</span><span>Options</span><span class="desktopControlTab">Controls</span><span>Links</span><span>Accounts</span></div>
                             <div id="tabAppearance">
                                 <div class="optionsHeader">Themes</div>
                                 <select id="optColors" tabindex="-1">
@@ -188,8 +188,27 @@
                                 <div class="moreLinks">
                                     <a class="link github" href="https://github.com/Taureon/aps-plus-plus">Source Code</a>
                                 </div>
-                                
                             </div>
+<div id="tabAccounts">
+    <!-- Log-in Section -->
+    <div class="optionsHeader">Log-in</div>
+    <form class="loginForm">
+        <input type="text" class="accountInput" name="loginUsername" placeholder="Enter your username">
+        <input type="password" class="accountInput" name="loginPassword" placeholder="Enter your password">
+        
+        <button class="submit" type="submit">Log in</button>
+    </form>
+
+    <!-- Create an Account Section -->
+    <div class="optionsHeader">Create an account</div>
+    <form class="createAccountForm">
+        <input type="text" class="accountInput" name="createUsername" placeholder="Choose a username">
+        <input type="password" class="accountInput" name="createPassword" placeholder="Choose a password">
+        
+        <button class="submit" type="submit">Create Account</button>
+    </form>
+</div>
+
                         </div>
                     </div>
                     <div style="position: relative; bottom: -10px;">

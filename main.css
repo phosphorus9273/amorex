@@ -169,7 +169,8 @@ body.mobile #optMobile, body.mobile #optBorders {
 }
 #playerKeyInput {
     padding: 2px;
-    color: gray;}
+    color: gray;
+}
 
 input:focus,
 input.focus {
@@ -177,6 +178,9 @@ input.focus {
     box-shadow: 0 0 3px 1px #DDDDDD;
 }
 
+.accountInput {
+  padding: 2px;
+}
 div {
     -webkit-user-select: none;
     /* webkit (safari, chrome) browsers */
@@ -393,6 +397,34 @@ select:active {
     background-attachment: local, local, scroll, scroll;
 }
 
+.submit {
+    font-family: Ubuntu;
+    position: relative;
+    margin: auto;
+    width: 75%;
+    height: 25px;
+    box-sizing: border-box;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #5a04bd;
+    /*background: #5a04bd;*/
+    /*background: #A9D86D;*/
+    border: 0;
+    border-bottom: 2px solid #4f00a8;
+    /*border-bottom: 2px solid #8ABC3F;*/
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #4f00a8;
+    /*-webkit-box-shadow: inset 0 -2px #8ABC3F;*/
+    box-shadow: inset 0 -2px #4f00a8;
+    /*box-shadow: inset 0 -2px #8ABC3F;*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-left: 12.5%;
+}
+
 #startButton {
     font-family: Ubuntu;
     position: relative;
@@ -423,7 +455,6 @@ select:active {
 #startButton:active,
 #startButton:hover {
     top: 1px;
-    background: #5b9e03;
     /*background: #8ABC3F;*/
     outline: none;
     -webkit-box-shadow: none;
