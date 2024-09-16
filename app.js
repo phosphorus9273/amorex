@@ -217,12 +217,12 @@ import * as socketStuff from "./lib/socketInit.js";
   }
   window.onload = async () => {
     const servers = [
-        ["l1xh4m2imznm5vanqera8r0vdbulqf5p.onrender.com", "USA", true, 0],
-				["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
-				["dzavyrbepkmrxwqgpivsboyuqzrfrzkm.onrender.com", "ASIA", true, 0],
-        ["bxd6lt9ta7qkw56xzgz5osqmtqch5mxb.onrender.com", "ASIA", true, 0],
-				["nhnwjivcgjucswmqm4tfavmxlaeyntaa.onrender.com", "EU", true, 0],
-				["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0],
+        ["amo-sv-m-us.onrender.com", "USA", true, 0],
+				// ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
+				["amo-sv-m-asia.onrender.com", "ASIA", true, 0],
+        // ["bxd6lt9ta7qkw56xzgz5osqmtqch5mxb.onrender.com", "ASIA", true, 0],
+				["amo-sv-m-eu.onrender.com", "EU", true, 0],
+				// ["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0],
 			];
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
