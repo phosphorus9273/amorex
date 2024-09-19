@@ -224,6 +224,27 @@ import * as socketStuff from "./lib/socketInit.js";
 				["amo-sv-m-eu.onrender.com", "EU", true, 0],
 				// ["e8tpqpx1silqre530vvu4h3lxvephvli.onrender.com", "EU", true, 0],
 			];
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const serverUrl = urlParams.get('s');
+
+    if (serverUrl) {
+        let location;
+        if (serverUrl.endsWith('.glitch.me')) {
+            location = "GLITCH";
+        } else if (serverUrl.endsWith('.onrender.com')) {
+            location = "RENDER";
+        } else if (serverUrl.endsWith('.csb.app')) {
+            location = "CSB";
+        } else {
+            location = "UNKNOWN";
+        };
+
+
+        if (location) {
+            servers.push([serverUrl, location, true, 0]);
+        }
+    }
     window.isMultiserver = true;
     let serverSelector = document.getElementById("serverSelector"),
       tbody = document.createElement("tbody");
