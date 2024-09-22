@@ -1,2 +1,2 @@
 # amorex
-built from aps++, maintained by phosphorus and witherznight
+built from aps, maintained by phosphorus and witherznight
