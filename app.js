@@ -1427,7 +1427,7 @@ import * as socketStuff from "./lib/socketInit.js";
   global.drawEntity = drawEntity;
   function drawHealth(x, y, instance, ratio, alpha) {
     let fade = instance.render.status.getFade();
-    ctx.globalAlpha = fade * fade;
+    ctx.globalAlpha = instance.alpha; // fuck you aps, why didn't yall do it by instance alpha instead
     let size = instance.size * ratio,
       indexes = instance.index.split("-"),
       m = global.mockups[parseInt(indexes[0])],
