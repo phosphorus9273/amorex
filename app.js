@@ -12,7 +12,7 @@ import * as socketStuff from "./lib/socketInit.js";
     socketStuff;
   // fetch("changelog.md", { cache: "no-cache" })
   // .then((response) => response.text())
-  // .then((response) => { // what the hell is all this shit????
+  // .then((response) => { // what the hell is all this shit??????
   //     const changelogs = response.split("\n\n").map((changelog) => changelog.split("\n"));
   //     for (let changelog of changelogs) {
   //         changelog[0] = changelog[0].split(":").map((line) => line.trim());
