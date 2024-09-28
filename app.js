@@ -2568,8 +2568,8 @@ import * as socketStuff from "./lib/socketInit.js";
   }
   function drawSelfInfo(spacing, alcoveSize, max) {
     //rendering information
-    let vspacing = 4.5;
-    let len = 1.75 * alcoveSize; // * global.screenWidth;
+    let vspacing = 4.35;
+    let len = 1.5 * alcoveSize; // * global.screenWidth;
     let height = 23;
     //   let col = settings.graphical.coloredHealthbars ? gameDraw.mixColors(gameDraw.modifyColor(global.nameColor), color.guiwhite, 0.5) : color.lgreen;
     let x = (global.screenWidth - len) / 2;
