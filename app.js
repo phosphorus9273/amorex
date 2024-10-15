@@ -72,7 +72,7 @@ import * as socketStuff from "./lib/socketInit.js";
       const to = this.start;
       this.start = start;
       this.to = to;
-    }
+    }//
     goodEnough(val = 0.5) {
       return Math.abs(this.to - this.value) < val;
     }
