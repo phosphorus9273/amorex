@@ -220,7 +220,7 @@ import * as socketStuff from "./lib/socketInit.js";
   }
   window.onload = async () => {
     const servers = [
-        [ global.serverOneABC , "USA", true, 0],
+        [ amo-sv-m-us.onrender.com , "USA", true, 0],
 				// ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
 				["amo-sv-m-asia.onrender.com", "ASIA", true, 0],
         // ["bxd6lt9ta7qkw56xzgz5osqmtqch5mxb.onrender.com", "ASIA", true, 0],
