@@ -19,7 +19,7 @@ const  { serverOneABC, serverTwoABC, serverThreeABC } = require('file.js');
   //         changelog[0] = changelog[0].split(":").map((line) => line.trim());
   //         document.getElementById("patchNotes").innerHTML += `<div><b>${changelog[0][0].slice(1).trim()}</b>: ${changelog[0].slice(1).join(":") || "Update lol"}<ul>${changelog.slice(1).map((line) => `<li>${line.slice(1).trim()}</li>`).join("")}</ul><hr></div>`;
   //     }
-  // });//test
+  // });//test222
 
   fetch("changelog.html", { cache: "no-cache" }).then(
     async (ChangelogsHTMLFile) => {
