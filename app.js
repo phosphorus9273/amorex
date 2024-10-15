@@ -7,7 +7,6 @@ import { Canvas } from "./lib/canvas.js";
 import { color } from "./lib/color.js";
 import { gameDraw } from "./lib/gameDraw.js";
 import * as socketStuff from "./lib/socketInit.js";
-import  { serverOneABC, serverTwoABC, serverThreeABC } from "./servereing.js";
 (async function (util, global, settings, Canvas, color, gameDraw, socketStuff) {
   let { socketInit, gui, leaderboard, minimap, moveCompensation, lag, getNow } =
     socketStuff;
@@ -221,7 +220,7 @@ import  { serverOneABC, serverTwoABC, serverThreeABC } from "./servereing.js";
   }
   window.onload = async () => {
     const servers = [
-        [ serverOneABC , "USA", true, 0],
+        [ global.serverOneABC , "USA", true, 0],
 				// ["qxrh04oo7bjdebotzrbkzt6iopljp1he.onrender.com", "USA", true, 0],
 				["amo-sv-m-asia.onrender.com", "ASIA", true, 0],
         // ["bxd6lt9ta7qkw56xzgz5osqmtqch5mxb.onrender.com", "ASIA", true, 0],
